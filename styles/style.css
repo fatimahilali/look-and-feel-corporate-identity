@@ -1,0 +1,424 @@
+/* ALGEMENE STYLING */
+
+/* Styling voor de gehele body van de pagina */
+body {
+    font-family: var(--font-default), sans-serif; /* Standaard lettertype voor de hele pagina */
+    font-size: var(--font-size-text); /* Standaard tekstgrootte voor de pagina */
+    margin: 0; /* Verwijdert de standaard marge van de browser */
+    padding: 0; /* Verwijdert de standaard padding van de browser */
+}
+
+/* De hoofdcontainer voor de navigatiebalk */
+.navbar {
+    display: flex; /* Zorgt voor een flexibele layout */
+    justify-content: space-between; /* Verspreidt inhoud gelijkmatig aan beide zijden */
+    align-items: center; /* Centreert items verticaal */
+    background-color: var(--black); /* Gebruik de variabele voor zwarte achtergrond */
+    color: var(--white); /* Gebruik de variabele voor witte tekst */
+    padding: 1rem 2rem; /* Binnenruimte voor de navbar */
+}
+
+/* Linkerkant van de navigatiebalk, bevat datum en andere elementen */
+.navbar-left {
+    display: flex; /* Flexibele layout */
+    align-items: center; /* Centreert items verticaal */
+    gap: 1.25rem; /* Ruimte tussen de elementen */
+}
+
+/* Sectie voor het weergeven van de datum */
+.date-section {
+    display: flex; /* Flexibele layout */
+    flex-direction: column; /* Plaatst datum en subtitel onder elkaar */
+}
+
+.date-section .date {
+    font-size: var(--font-size-meta); /* Gebruik de variabele voor kleine tekstgrootte */
+    font-weight: bold; /* Zorgt voor vetgedrukte tekst */
+    margin-bottom: 0.5em; /* Ruimte onder de datum */
+}
+
+.date-section .subtitle {
+    font-size: var(--font-size-menu); /* Gebruik de variabele voor kleine menu-tekstgrootte */
+    color: var(--darkgrey); /* Gebruik de variabele voor grijze tekst */
+    margin-top: 0.25em; /* Ruimte boven de subtitel */
+}
+
+/* Sectie die iconen en teksten bevat */
+.icons {
+    display: flex; /* Flexibele layout */
+    gap: 1rem; /* Ruimte tussen de iconen */
+}
+
+/* Layout voor een icoon en de bijbehorende tekst */
+.icon-text {
+    display: flex; /* Plaatst icoon en tekst naast elkaar */
+    align-items: center; /* Centreert ze verticaal */
+    gap: 0.5em; /* Ruimte tussen het icoon en de tekst */
+    font-size: var(--font-size-meta); /* Gebruik de variabele voor kleine tekst */
+}
+
+.icon {
+    width: 1rem; /* Breedte van het icoon (16px) */
+    height: 1rem; /* Hoogte van het icoon (16px) */
+    fill: var(--primary-color-light); /* Gebruik lichte primaire kleur voor het icoon */
+    margin-left: 3.125rem; /* Ruimte links van het icoon */
+}
+
+/* Rechterkant van de navigatiebalk met links */
+.navbar-right {
+    display: flex; /* Flexibele layout */
+    align-items: center; /* Centreert items verticaal */
+    gap: 1.25rem; /* Ruimte tussen de links */
+}
+
+/* Styling voor de links in de rechterkant van de navbar */
+.navbar-right a {
+    color: var(--white); /* Gebruik witte kleur voor links */
+    text-decoration: none; /* Verwijdert onderlijning */
+    font-size: var(--font-size-text); /* Gebruik standaard tekstgrootte */
+    transition: color 0.3s; /* Voegt een kleurtransitie toe bij hover */
+}
+
+/* Hover-effect voor de links */
+.navbar-right a:hover {
+    color: var(--darkgrey); /* Gebruik donkere grijze kleur bij hover */
+}
+
+/* Aanpassingen voor schermen kleiner dan 768px (48rem) */
+@media (max-width: 48rem) { 
+    .navbar {
+        flex-direction: column; /* Zet navbar-items onder elkaar */
+        align-items: flex-start; /* Uitlijning aan de linkerkant */
+    }
+
+    .navbar-left {
+        flex-direction: column; /* Plaatst items van de linkerkant onder elkaar */
+        align-items: flex-start; /* Uitlijning aan de linkerkant */
+    }
+
+    .navbar-right {
+        flex-wrap: wrap; /* Zorgt ervoor dat links worden doorgeschoven naar een nieuwe regel */
+        gap: 0.625rem; /* Ruimte tussen links wordt kleiner */
+    }
+}
+
+/* Container voor het logo onder de navigatie */
+.logo-container {
+    display: flex; /* Maakt de container een flexibele box voor eenvoudige uitlijning */
+    justify-content: center; /* Centreert het logo horizontaal in de container */
+    margin: 2rem 0; /* Creëert ruimte van 2rem boven en onder de container */
+    padding: 5rem;
+}
+
+.logo {
+    height: 5rem; /* Stelt de vaste hoogte van het logo in voor consistentie */
+    width: auto; /* Zorgt ervoor dat de breedte automatisch wordt aangepast om de aspectratio te behouden */
+}
+
+/* Secundaire navigatiebalk stijlen */
+.secondary-navbar {
+    margin: 1rem; /* Voeg witruimte rondom de gehele navbar toe */
+    margin-bottom: 5rem; /* Extra ruimte onder de navbar om visuele scheiding te creëren */
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1); /* Lichte schaduw voor diepte en visuele scheiding van de achtergrond */
+    background-color: var(--black); /* Gebruik zwarte kleur voor hoog contrast met witte tekst */
+}
+
+/* Stijl voor de navigatielijst */
+.secondary-nav-list {
+    display: flex; /* Flexbox voor horizontale uitlijning van de items */
+    justify-content: center; /* Centreer de navigatie-items binnen de lijst */
+    list-style-type: none; /* Verwijder standaard opsommingstekens */
+    padding: 0; /* Verwijder standaard padding van de lijst */
+    margin: 0; /* Verwijder standaard marges van de lijst */
+    flex-wrap: wrap; /* Zorg dat items naar een nieuwe regel springen op kleinere schermen */
+}
+
+/* Stijl voor de navigatie-items */
+.secondary-item a {
+    text-decoration: none; /* Verwijder standaard onderstreping van links */
+    color: var(--white); /* Witte tekstkleur voor hoog contrast tegen de donkere achtergrond */
+    padding: 0.75rem 1rem; /* Voeg binnenruimte toe voor een betere klikbare ruimte */
+    border-radius: 0.25rem; /* Voeg subtiele afgeronde hoeken toe v*/
+    background-color: transparent; /* Zorg dat links standaard een transparante achtergrond hebben */
+    display: block; /* Zorg dat de volledige padding klikbaar is, niet alleen de tekst */
+}
+
+/* Hover- en focus-effecten voor links */
+.secondary-item a:hover,
+.secondary-item a:focus {
+    color: var(--white); /* Behoud witte tekstkleur voor consistente leesbaarheid */
+    background-color: var(--darkgrey); /* Gebruik donkere grijze achtergrondkleur om hover te benadrukken */
+    box-shadow: inset 0 0 0 0.125rem var(--white); /* Subtiele witte rand binnen de knop voor focus */
+    transform: scale(1.05); /* Maak de link iets groter  */
+}
+
+/* Focusring voor toetsenbordgebruikers */
+.secondary-item a:focus {
+    outline: 0.2rem solid var(--primary-color); /* Rode focusring om visueel onderscheid te bieden voor toetsenbordgebruikers */
+    outline-offset: 0.2rem; /* Plaats de outline net buiten het element */
+    box-shadow: 0 0 0 0.2rem rgba(255, 102, 71, 0.5); /* Subtiele schaduw rond de focusring om deze meer op te laten vallen */
+}
+
+/* Separator tussen de items */
+.secondary-separator {
+    height: 1.25rem; /* Hoogte van de scheidingslijn */
+    width: 0.125rem; /* Breedte van de scheiding */
+    background-color: rgba(255, 255, 255, 0.3); /* Witte kleur met transparantie voor een subtiele scheiding */
+    margin: 0 1rem; /* Voeg ruimte aan beide zijden van de separator toe */
+    margin-top: 0.625rem; /* Zorg dat de separator visueel gecentreerd staat met de links */
+}
+
+/* Responsieve aanpassing */
+@media (max-width: 768px) {
+    .secondary-navbar {
+        display: none; /* Verberg de secundaire navigatiebalk op schermen smaller dan 768px om ruimte te besparen */
+    }
+}
+
+
+/* Contactpagina container */
+.contact-page {
+    display: flex; /* Gebruikt flexbox om de inhoud uit te lijnen */
+    justify-content: center; /* Centreert de inhoud horizontaal */
+    align-items: center; /* Centreert de inhoud verticaal */
+    min-height: 100vh; /* Zorgt ervoor dat de container minimaal de volledige hoogte van het scherm beslaat */
+}
+
+/* Hoofdcontainer voor formulier en contactinformatie */
+.contact-container {
+    display: flex; /* Flexbox-indeling voor de secties */
+    max-width: 68.75rem; /* Maximale breedte van de container (1100px) */
+    width: 80%; /* De container neemt 80% van de schermbreedte in */
+    border-radius: 1.25rem; /* Maakt de hoeken afgerond */
+    box-shadow: 0 0.625rem 1.875rem var(--black); /* Voegt een schaduw toe */
+    overflow: hidden; /* Inhoud buiten de container wordt verborgen */
+    border: 0.0625rem solid var(--primary-color-light); /* Subtiele rand in een lichte primaire kleur */
+}
+
+/* FORMULIERSECTIE */
+
+/* Linker sectie: formulier */
+.form-section {
+    flex: 1; /* Neemt de helft van de breedte van de container in */
+    padding: 2.5em; /* Ruimte binnenin de sectie */
+    background-color: var(--primary-color-light); /* Achtergrondkleur van de sectie */
+    border-radius: 1.25rem 0 0 1.25rem; /* Alleen de linker boven- en onderhoek zijn afgerond */
+}
+
+/* Koptekst in de formuliersectie */
+.form-section h1 {
+    font-size: 2.5rem; /* Grote koptekst, direct specifieke waarde voor consistentie */
+    font-family: 'Arial', sans-serif; /* Meer specifiek lettertype als fallback */
+    font-weight: 700; /* Bolder en makkelijker te begrijpen */
+    margin-bottom: 1rem; /* Iets afgeronde waarde voor consistentie */
+    color: #000; /*kleur */
+    line-height: 1.2; /*leesbaar bij grotere koptekst */
+    letter-spacing: 0.05em; /* Subtiele letterafstand, voorkomt te veel ruimte */
+}
+
+
+/* Inleidende tekst in de formuliersectie */
+.form-section p {
+    font-size: var(--font-size-text); /* Standaard tekstgrootte */
+    font-family: var(--font-default), sans-serif; /* Standaard lettertype */
+    margin-bottom: 1.875em; /* Ruimte onder de tekst */
+    color: var(--black); /* Tekstkleur: zwart */
+    line-height: var(--line-height-m); /* Grotere regelafstand voor leesbaarheid */
+    letter-spacing: var(--letter-spacing-s); /* Subtiele letterafstand */
+}
+
+/* Labels en invoervelden in het formulier */
+.form-field {
+    display: flex; /* Flexbox-indeling */
+    flex-direction: column; /* Plaatst labels boven de invoervelden */
+    gap: 0.5em; /* Ruimte tussen labels en invoervelden */
+    flex: 1; /* Neemt beschikbare ruimte in */
+}
+
+/* Styling voor formulierlabels */
+label {
+    font-size: 0.875rem; /* Iets kleinere tekstgrootte (14px) */
+    font-weight: bold; /* Vetgedrukte tekst */
+    color: var(--black); /* Zwarte tekstkleur */
+    line-height: var(--line-height-s); /*  regelafstand */
+    letter-spacing: var(--letter-spacing-s); /*  letterafstand */
+}
+
+/* Formulier rij-indeling */
+.form-row {
+    display: flex; /* Flexbox-indeling voor invoervelden op een rij */
+    gap: 3.75rem; /* Ruimte tussen invoervelden */
+    margin-bottom: 1.25em; /* Ruimte onder de rij */
+}
+
+/* Styling voor invoervelden (zoals tekst en tekstvakken) */
+input, textarea {
+    width: 100%; /* Invoervelden nemen de volledige breedte in */
+    padding: 0.875em; /* Ruimte binnenin de invoervelden */
+    font-size: var(--font-size-meta); /* Kleinere tekstgrootte voor invoer */
+    border: 0.0625rem solid var(--primary-color-accent); /* Rand in een accentkleur */
+    border-radius: 0.5rem; /* Afgeronde hoeken */
+    background: linear-gradient(135deg, rgba(225, 225, 225, 0.6), rgba(249, 205, 200, 0.6)); /* Uniek kleurverloop als achtergrond */
+    backdrop-filter: blur(0.375rem); /* Licht wazig effect */
+    color: var(--black); /* Zwarte tekstkleur */
+    outline: none; /* Verwijdert standaard browserfocusoutline */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Animatie bij interactie */
+}
+
+/* Styling voor placeholder-tekst in invoervelden */
+input::placeholder, textarea::placeholder {
+    color: var(--darkgrey); /* Subtiele grijze tekstkleur voor placeholders */
+}
+
+/* Styling voor invoervelden bij focus */
+input:focus, textarea:focus {
+    border: 0.125rem solid var(--primary-color-light); /* Randkleur verandert bij focus */
+    background-color: var(--secondary-color); /* Achtergrondkleur verandert bij focus */
+}
+
+/* Styling specifiek voor tekstvakken */
+textarea {
+    resize: none; /* Gebruikers kunnen de grootte van het tekstvak niet aanpassen */
+    height: 7.5rem; /* Standaardhoogte van het tekstvak */
+}
+
+/* Styling voor knoppen */
+button {
+    margin-top: 1.25em; /* Ruimte boven de knop */
+    background-color: var(--black); /* Zwarte achtergrondkleur */
+    border: 0.125rem solid var(--primary-color-light); /* Rand in een lichte primaire kleur */
+    color: var(--primary-color-light); /* Tekstkleur in een lichte primaire kleur */
+    padding: 0.875em 1.875em; /* Binnenruimte in de knop */
+    border-radius: 0.625rem; /* Afgeronde hoeken */
+    font-size: 1rem; /* Standaard tekstgrootte */
+    font-weight: bold; /* Vetgedrukte tekst */
+    cursor: pointer; /* Verandert de muiscursor naar een handje */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Animatie bij hover */
+}
+
+/* Styling voor knoppen bij hover */
+button:hover {
+    background-color: var(--primary-color-light); /* Achtergrondkleur verandert bij hover */
+    color: var(--black); /* Tekstkleur verandert naar zwart bij hover */
+    transform: translateY(-0.1875rem); /* Lichte verplaatsing naar boven bij hover */
+    box-shadow: var(--black); /* Schaduw wordt toegepast bij hover */
+}
+
+/* CONTACTINFORMATIESECTIE */
+
+/* Rechter sectie: contactinformatie */
+.info-section {
+    flex: 1; /* Neemt de helft van de breedte in */
+    padding: 2.5em; /* Binnenruimte in de sectie */
+    color: var(--lightgrey); /* Tekstkleur is lichtgrijs */
+    background-color: var(--black); /* Achtergrondkleur is zwart */
+    border-radius: 0 1.25rem 1.25rem 0; /* Alleen de rechter boven- en onderhoek zijn afgerond */
+}
+
+/* Kopteksten in de contactinformatie */
+.info-section h2 {
+    font-size: var(--font-size-header-m); /* Middelgrote koptekst */
+    font-weight: bold; /* Vetgedrukte tekst */
+    font-family: var(--font-heading-important), sans-serif; /* Speciaal lettertype voor kopteksten */
+    margin-bottom: 1.25em; /* Ruimte onder de koptekst */
+    color: var(--primary-color-light); /* Accentkleur voor de koptekst */
+    line-height: var(--line-height-s); /* Compacte regelafstand */
+    letter-spacing: var(--letter-spacing-l); /* Brede letterafstand */
+}
+
+/* Titel voor social media sectie in de contactinformatie */
+.info-section h3 {
+    font-size: var(--font-size-header-s); /* Gebruik de variabele voor een kleine header */
+    font-weight: bold; /* Zorg dat de tekst vetgedrukt is */
+    color: var(--white); /* Gebruik een kleur die aansluit bij het ontwerp */
+    line-height: var(--line-height-xs); /* Gebruik de lijnhoogte voor kopteksten */
+    font-family: var(--font-heading-important), sans-serif; /* Gebruik het font voor belangrijke koppen */
+    margin-bottom: 0.75rem; /* Voeg wat ruimte onder de kop toe */
+}
+
+
+/* Styling voor adresinformatie */
+address {
+    font-style: normal; /* Verwijdert cursief standaard bij address-tags */
+    line-height: var(--line-height-l); /* Grotere regelafstand voor leesbaarheid */
+    margin-bottom: 1.875em; /* Ruimte onder het adres */
+    color: var(--lightgrey); /* Lichtgrijze tekstkleur */
+    letter-spacing: var(--letter-spacing-s); /* Subtiele letterafstand */
+}
+
+/* Styling voor links in de contactinformatie */
+.info-section a {
+    color: var(--primary-color-light); /* Accentkleur voor links */
+    font-family: var(--font-default), sans-serif; /* Standaard lettertype voor tekst */
+    font-size: var(--font-size-text); /* Standaard tekstgrootte */
+    text-decoration: none; /* Verwijdert onderlijning */
+    transition: color 0.3s ease; /* Animatie bij kleurverandering */
+}
+
+/* Styling voor links bij hover */
+.info-section a:hover {
+    color: var(--white); /* Tekstkleur verandert naar wit bij hover */
+    text-decoration: underline; /* Onderlijning verschijnt bij hover */
+}
+
+/* VISUEEL VERBORGEN ELEMENTEN (SCREENREADER-TOEGANKELIJKHEID) */
+
+/* Items verbergen voor visuele gebruikers maar zichtbaar maken voor screenreaders */
+.visually-hidden {
+    position: absolute; /* Verplaatst het element buiten het zichtbare gebied */
+    width: 1px; /* Maakt het element praktisch onzichtbaar */
+    height: 1px;
+    margin: -1px; /* Negatieve marge verbergt het volledig */
+    padding: 0;
+    overflow: hidden; /* Verbergt alle inhoud buiten de grenzen */
+    clip: rect(0, 0, 0, 0); /* Knipt het element volledig uit het zicht */
+    border: 0; /* Verwijdert eventuele randen */
+}
+
+/* Markering voor verplichte velden */
+.required-symbol {
+    color: var(--primary-color); /* Accentkleur voor de markering */
+    font-weight: bold; /* Vetgedrukte tekst */
+}
+
+/* Styling voor veldsets en legend (voor formulieren) */
+fieldset {
+    border: none; /* Verwijdert de standaard rand */
+    margin: 0; /* Geen marges */
+    padding: 0; /* Geen padding */
+}
+legend {
+    position: absolute; /* Verbergt de legend volledig */
+    width: 0.0625rem; 
+    height: 0.0625rem;
+    margin: -0.0625rem; 
+    padding: 0; 
+    overflow: hidden; 
+    clip: rect(0rem, 0rem, 0rem, 0rem); 
+    border: 0; 
+}
+
+
+/* RESPONSIVE DESIGN */
+
+/* Aanpassingen voor kleinere schermen */
+@media (max-width: 48rem) { /* Schermen met een breedte van 768px of kleiner */
+    .contact-container {
+        flex-direction: column; /* Stapelt de secties onder elkaar */
+    }
+
+    .form-section, .info-section {
+        padding: 1.25em; /* Vermindert de binnenruimte */
+        border-radius: 1.25rem; /* Maakt hoeken gelijkmatig afgerond */
+    }
+
+    .form-row {
+        flex-direction: column; /* Plaatst invoervelden onder elkaar */
+        gap: 0.9375em; /* Kleinere ruimte tussen rijen */
+    }
+
+    button {
+        padding: 0.75em 1.25em; /* Kleinere knoppen voor mobiel */
+    }
+}
+
