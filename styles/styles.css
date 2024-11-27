@@ -359,7 +359,7 @@
 
 /* Algemene styling voor grid-items */
 
-    .breadcrumb-container .breadcrumb-logo {
+ .breadcrumb-container .breadcrumb-logo {
         font-size: 0.875rem; /* Verklein logo-tekst op mobiele apparaten */
     }
 
@@ -399,6 +399,29 @@
 .article-metadata {
     color:  gray;
     font-weight: bold;
+}
+
+
+
+
+/* Mobiele apparaten en kleinere schermen */
+@media (max-width: 48rem) { 
+    .breadcrumb-container {
+        flex-direction: column; /* Breadcrumbs stapelen onder elkaar */
+        align-items: flex-start; /* Links uitlijnen */
+        gap: 0.5rem; /* Minder ruimte tussen items */
+        padding: 0.5rem 1rem; /* Compactere padding */
+    }
+
+    .breadcrumb-container .breadcrumb-logo {
+        margin-left: 0; /* Geen marge voor mobiel */
+        font-size: 0.75rem; /* Kleiner lettertype voor logo */
+        padding: 0.25rem 0.4rem; /* Kleinere padding voor logo */
+    }
+
+    .breadcrumb {
+        font-size: 0.75rem; /* Kleinere tekst voor breadcrumbs */
+    }
 }
 
 
