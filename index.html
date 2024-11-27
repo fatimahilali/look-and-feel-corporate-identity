@@ -1,178 +1,539 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+    <!-- Basisinformatie over de pagina -->
+    <meta charset="UTF-8"> <!-- Zorgt voor ondersteuning van speciale tekens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Maakt de pagina responsief -->
+    <title>Homepagina</title> <!-- Titel die wordt weergegeven in de browser-tab -->
+    <link rel="stylesheet" href="styles/styles.css"> <!-- Verwijzing naar de externe CSS-stijlen -->
+    <link rel="stylesheet" href="https://divaninl.github.io/redpers-styleguide/redpers.css">
 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title> Contactpagina</title> 
-      
-        <link rel="stylesheet" href="styles/redpers.css"> <!-- Gezamenlijke stylesheet -->
-        <link rel="stylesheet" href="styles/style.css"> <!-- Link naar mijn stylsheet -->
 </head>
 <body>
-
-<!-- Hoofdnavigatie -->
-<nav class="navbar" aria-label="Hoofdnavigatie">
-    <!-- Linkerkant van de navigatiebalk -->
-    <div class="navbar-left">
-        <!-- Datum en subtitel -->
-        <div class="date-section">
-            <span class="date">Woensdag 16 november 2024</span> <!-- Datumweergave -->
-            <span class="subtitle">Podium voor de journalistiek</span> <!-- Beschrijvende subtitel -->
-        </div>
-        <!-- Iconen sectie -->
-        <div class="icons">
-            <!-- Nieuwsbrief icoon en tekst -->
-            <div class="icon-text">
-                <!-- SVG voor het icoon -->
-                <svg aria-label="Nieuwsbrief" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
-                    <!-- Het pad van de SVG definieert hoe het icoon eruitziet -->
-                    <path d="M129.23-566.923q0-76.923 30.654-143.116 30.654-66.192 83.347-114.269l27 29.385q-46.923 42.461-73.962 101-27.038 58.538-27.038 127H129.23Zm661.539 0q0-68.462-27.038-127.385-27.039-58.923-73.962-101.384l27-28.616q52.693 48.077 83.347 114.269 30.654 66.193 30.654 143.116h-40.001ZM200-209.231v-40h64.615v-316.923q0-78.384 49.616-137.884Q363.846-763.539 440-778.154V-800q0-16.539 11.731-28.269Q463.461-840 480-840q16.539 0 28.269 11.731Q520-816.539 520-800v21.846q76.154 14.615 125.769 74.116 49.616 59.5 49.616 137.884v316.923H760v40H200Zm280-286.154Zm0 390.77q-26.846 0-45.731-18.885-18.884-18.885-18.884-45.731h129.23q0 26.846-18.884 45.731-18.885 18.885-45.731 18.885ZM304.615-249.231h350.77v-316.923q0-72.923-51.231-124.154-51.231-51.23-124.154-51.23t-124.154 51.23q-51.231 51.231-51.231 124.154v316.923Z"/>
-                </svg>
-                <span>Nieuwsbrief</span> <!-- Tekst naast het icoon -->
+    
+    <!-- Hoofdsectie van de pagina -->
+   
+        <!-- Navigatiebalk -->
+        <nav class="navbar" aria-label="Hoofdnavigatie"> <!-- Toegankelijkheidslabel voor screenreaders -->
+            <!-- Linkerkant van de navigatie -->
+            <div class="navbar-left">
+                <!-- Datum en subtitel sectie -->
+                <div class="date-section">
+                    <span class="date">Woensdag 16 november 2024</span> <!-- Datumweergave -->
+                    <span class="subtitle">Podium voor de journalistiek</span> <!-- Beschrijvende subtitel -->
+                </div>
+                <!-- Sectie voor iconen -->
+                <div class="icons">
+                    <!-- Icoon en tekst voor Nieuwsbrief -->
+                    <div class="icon-text">
+                        <svg aria-label="Nieuwsbrief" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                            <!-- SVG-pad voor het Nieuwsbrief-icoon -->
+                            <path d="M129.23-566.923q0-76.923 30.654-143.116 30.654-66.192 83.347-114.269l27 29.385q-46.923 42.461-73.962 101-27.038 58.538-27.038 127H129.23Zm661.539 0q0-68.462-27.038-127.385-27.039-58.923-73.962-101.384l27-28.616q52.693 48.077 83.347 114.269 30.654 66.193 30.654 143.116h-40.001ZM200-209.231v-40h64.615v-316.923q0-78.384 49.616-137.884Q363.846-763.539 440-778.154V-800q0-16.539 11.731-28.269Q463.461-840 480-840q16.539 0 28.269 11.731Q520-816.539 520-800v21.846q76.154 14.615 125.769 74.116 49.616 59.5 49.616 137.884v316.923H760v40H200Zm280-286.154Zm0 390.77q-26.846 0-45.731-18.885-18.884-18.885-18.884-45.731h129.23q0 26.846-18.884 45.731-18.885 18.885-45.731 18.885ZM304.615-249.231h350.77v-316.923q0-72.923-51.231-124.154-51.231-51.23-124.154-51.23t-124.154 51.23q-51.231 51.231-51.231 124.154v316.923Z"/>
+                        </svg>
+                        <span>Nieuwsbrief</span> <!-- Beschrijvende tekst naast het icoon -->
+                    </div>
+                    <!-- Icoon en tekst voor Zoeken -->
+                    <div class="icon-text">
+                        <svg aria-label="Zoeken" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
+                            <!-- SVG-pad voor het Zoeken-icoon -->
+                            <path d="M779.385-153.846 528.923-404.307q-30 25.538-69 39.538-39 14-78.385 14-96.1 0-162.665-66.529-66.566-66.529-66.566-162.577t66.529-162.702q66.529-66.654 162.577-66.654 96.049 0 162.702 66.565Q610.769-676.101 610.769-580q0 41.692-14.769 80.692-14.769 39-38.769 66.693l250.462 250.461-28.308 28.308ZM381.538-390.769q79.616 0 134.423-54.808Q570.769-500.385 570.769-580q0-79.615-54.808-134.423-54.807-54.808-134.423-54.808-79.615 0-134.423 54.808Q192.308-659.615 192.308-580q0 79.615 54.807 134.423 54.808 54.808 134.423 54.808Z"/>
+                        </svg>
+                        <span>Zoeken</span> <!-- Beschrijvende tekst naast het icoon -->
+                    </div>
+                </div>
             </div>
-            <!-- Zoeken icoon en tekst -->
-            <div class="icon-text">
-                <!-- SVG voor het icoon -->
-                <svg aria-label="Zoeken" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="icon">
-                    <!-- Het pad van de SVG definieert hoe het icoon eruitziet -->
-                    <path d="M779.385-153.846 528.923-404.307q-30 25.538-69 39.538-39 14-78.385 14-96.1 0-162.665-66.529-66.566-66.529-66.566-162.577t66.529-162.702q66.529-66.654 162.577-66.654 96.049 0 162.702 66.565Q610.769-676.101 610.769-580q0 41.692-14.769 80.692-14.769 39-38.769 66.693l250.462 250.461-28.308 28.308ZM381.538-390.769q79.616 0 134.423-54.808Q570.769-500.385 570.769-580q0-79.615-54.808-134.423-54.807-54.808-134.423-54.808-79.615 0-134.423 54.808Q192.308-659.615 192.308-580q0 79.615 54.807 134.423 54.808 54.808 134.423 54.808Z"/>
-                </svg>
-                <span>Zoeken</span> <!-- Tekst naast het icoon -->
+            <!-- Rechterkant van de navigatie -->
+            <div class="navbar-right">
+                <!-- Navigatielinks -->
+                <a href="#" aria-label="Lees meer over de colofon">COLOFON</a> <!-- Link naar de colofon-pagina -->
+                <a href="#" aria-label="Over ons">OVER</a> <!-- Link naar de Over-pagina -->
+                <a href="#" aria-label="Hoe je kunt meedoen">MEEDOEN</a> <!-- Link naar de Meedoen-pagina -->
+                <a href="contact.html" aria-label="Neem contact met ons op">CONTACT</a> <!-- Link naar de Contact-pagina -->
             </div>
-        </div>
-    </div>
-    <!-- Rechterkant van de navigatiebalk -->
-    <div class="navbar-right">
-        <!-- Navigatielinks -->
-        <a href="#" aria-label="Lees meer over de colofon">COLOFON</a> <!-- Link naar de colofon-pagina -->
-        <a href="#" aria-label="Over ons">OVER</a> <!-- Link naar de Over-pagina -->
-        <a href="#" aria-label="Hoe je kunt meedoen">MEEDOEN</a> <!-- Link naar de Meedoen-pagina -->
-        <a href="#" aria-label="Neem contact met ons op">CONTACT</a> <!-- Link naar de Contact-pagina -->
-    </div>
-</nav>
+        </nav>
+ <header>
 
-<!-- Header sectie -->
-<header>
-    <!-- Logo-container -->
+            <!-- Logo -->
+
     <div class="logo-container">
-        <img src="assets/logo.jpg" alt="Logo van Redpers, podium voor de journalistiek" class="logo"> <!-- Beschrijvende logo afbeelding -->
+        <img src="assets/logo.jpg" alt="Redpers Logo" class="logo">
     </div>
 
-    <!-- Secundaire navigatiebalk -->
-    <div class="secondary-navbar">
-        <ul class="secondary-nav-list">
-            <li class="secondary-separator"></li>
-            <li class="secondary-item"><a href="https://redpers.nl/">Voorpagina</a></li>
-            <li class="secondary-separator"></li> <!-- Separator tussen de navigatie-items -->
-            <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/binnenland/">Binnenland</a></li>
-            <li class="secondary-separator"></li>
-            <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/buitenland/">Buitenland</a></li>
-            <li class="secondary-separator"></li>
-            <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/column/">Columns</a></li>
-            <li class="secondary-separator"></li>
-            <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/economie/">Economie</a></li>
-            <li class="secondary-separator"></li>
-            <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/kunst-media/">Kunst & Media</a></li>
-            <li class="secondary-separator"></li>
-            <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/podcast/">Podcasts</a></li>
-            <li class="secondary-separator"></li>
-            <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/politiek/">Politiek</a></li>
-            <li class="secondary-separator"></li>
-            <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/wetenschap/">Wetenschap</a></li>
-            <li class="secondary-separator"></li>
 
-        </ul>
-    </div>
-</header>
+         <!-- Secundaire navigatiebalk -->
+         <div class="secondary-navbar">
+            <ul class="secondary-nav-list">
+                <li class="secondary-separator"></li>
+                <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/binnenland/">Binnenland</a></li>
+                <li class="secondary-separator"></li>
+                <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/buitenland/">Buitenland</a></li>
+                <li class="secondary-separator"></li>
+                <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/column/">Columns</a></li>
+                <li class="secondary-separator"></li>
+                <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/economie/">Economie</a></li>
+                <li class="secondary-separator"></li>
+                <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/kunst-media/">Kunst & Media</a></li>
+                <li class="secondary-separator"></li>
+                <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/podcast/">Podcasts</a></li>
+                <li class="secondary-separator"></li>
+                <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/politiek/">Politiek</a></li>
+                <li class="secondary-separator"></li>
+                <li class="secondary-item"><a href="https://redpers.nl/category/rubriek/wetenschap/">Wetenschap</a></li>
+            </ul>
+        </div>
+    </header>
 
-    <!-- Hoofdcontainer voor de contactpagina -->
-    <div class="contact-page">
-        <div class="contact-container">
-            
-            <!-- Sectie: Formulier om berichten te sturen -->
-            <div class="form-section">
-                <h1>Stuur ons een Bericht!</h1> <!-- Titel van de formuliersectie -->
-                <p>Velden met een <span class="required-symbol">*</span> zijn verplicht.</p> <!-- Uitleg over verplichte velden -->
-                
-                <!-- Begin van het formulier -->
-                <form>
-                    <!-- Groepering van persoonlijke gegevens -->
-                    <fieldset>
-                        <legend>Persoonlijke Gegevens</legend> <!-- Beschrijft de sectie voor persoonlijke gegevens -->
-                        <div class="form-row">
-                            <!-- Invoerveld voor voornaam -->
-                            <div class="form-field">
-                                <label for="first-name">Voornaam <span class="required-symbol">*</span></label>
-                                <input type="text" id="first-name" name="first-name" placeholder="Voer je voornaam in" required aria-describedby="first-name-desc">
-                                <!-- Toegankelijkheidsuitleg voor schermlezers -->
-                                <span id="first-name-desc" class="visually-hidden">Dit veld is verplicht. Voer je voornaam in.</span>
-                            </div>
-                            <!-- Invoerveld voor achternaam -->
-                            <div class="form-field">
-                                <label for="last-name">Achternaam <span class="required-symbol">*</span></label>
-                                <input type="text" id="last-name" name="last-name" placeholder="Voer je achternaam in" required aria-describedby="last-name-desc">
-                                <!-- Toegankelijkheidsuitleg voor schermlezers -->
-                                <span id="last-name-desc" class="visually-hidden">Dit veld is verplicht. Voer je achternaam in.</span>
-                            </div>
-                        </div>
-                    </fieldset>
-                    
-                    <!-- Groepering van contactgegevens -->
-                    <fieldset>
-                        <legend>Contactgegevens</legend> <!-- Beschrijft de sectie voor contactinformatie -->
-                        <div class="form-row">
-                            <!-- Invoerveld voor e-mailadres -->
-                            <div class="form-field">
-                                <label for="email">E-mailadres <span class="required-symbol">*</span></label>
-                                <input type="email" id="email" name="email" placeholder="bijv. naam@voorbeeld.com" required aria-describedby="email-desc">
-                                <!-- Toegankelijkheidsuitleg voor schermlezers -->
-                                <span id="email-desc" class="visually-hidden">Voer een geldig e-mailadres in, zoals naam@voorbeeld.com.</span>
-                            </div>
-                            <!-- Optioneel invoerveld voor onderwerp -->
-                            <div class="form-field">
-                                <label for="subject">Onderwerp</label>
-                                <input type="text" id="subject" name="subject" placeholder="Voer het onderwerp in" aria-describedby="subject-desc">
-                                <span id="subject-desc" class="visually-hidden">Dit veld is optioneel. Voer een onderwerp in als je wilt specificeren waar je bericht over gaat.</span>
+  
 
-                            </div>
-                        </div>
-                    </fieldset>
-                    
-                    <!-- Groepering van bericht -->
-                    <fieldset>
-                        <legend>Bericht</legend> <!-- Beschrijft de sectie voor het bericht -->
-                        <div class="form-field">
-                            <label for="message">Bericht <span class="required-symbol">*</span></label>
-                            <textarea id="message" name="message" placeholder="Schrijf hier je bericht..." required aria-describedby="message-desc"></textarea>
-                            <!-- Toegankelijkheidsuitleg voor schermlezers -->
-                            <span id="message-desc" class="visually-hidden">Voer je bericht in. Dit veld is verplicht.</span>
 
-                        </div>
-                    </fieldset>
-                    
-                    <!-- Verzendknop -->
-                    <button type="submit" aria-label="Verzend het formulier">Verzenden</button>
-                </form>
+<!-- Breadcrumb sectie -->
+<div class="breadcrumb-container" role="navigation" aria-label="Breadcrumb">
+    <!-- Breadcrumb-container fungeert als navigatiehulpmiddel -->
+    <!-- Het 'role="navigation"' attribuut maakt duidelijk dat dit een navigatiesectie is -->
+    <!-- Het 'aria-label="Breadcrumb"' geeft screenreaders aanvullende context over het type navigatie -->
+
+    <!-- Link naar de startpagina -->
+    <a href="/" class="breadcrumb-logo">VOORPAGINA</a>
+    <!-- Linktekst toont de naam van de startpagina -->
+    <!-- Het gebruik van een link (<a>) maakt het klikbaar, zodat gebruikers snel naar de startpagina kunnen navigeren -->
+
+    <!-- Scheidingsteken tussen breadcrumb-niveaus -->
+    <span aria-hidden="true"> &gt; </span>
+    <!-- 'aria-hidden="true"' zorgt ervoor dat screenreaders dit symbool negeren omdat het puur decoratief is -->
+
+    <!-- Link naar de categoriepagina -->
+    <a href="/binnenland" class="breadcrumb">BINNENLAND</a>
+    <!-- Link verwijst naar de hoofdcategorie (BINNENLAND) -->
+    <!-- Hiermee kunnen gebruikers snel navigeren -->
+
+    <!-- Scheidingsteken tussen breadcrumb-niveaus -->
+    <span aria-hidden="true"> &gt; </span>
+    <!-- Decoratief scheidingsteken, niet relevant voor screenreaders -->
+
+    <!-- Huidige pagina -->
+    <span class="breadcrumb" aria-current="page">Decennia na verschijning</span>
+    <!-- Het 'aria-current="page"' attribuut geeft aan dat dit de huidige pagina is -->
+    <!-- Gebruik van een <span> zonder link (<a>) benadrukt dat dit item niet klikbaar is -->
+</div>
+<main>
+    
+    <div class="grid-container">
+        <!-- Eerste grid-item: Grote afbeelding -->
+        <article class="grid-item grid-item-large">
+            <img 
+                src="assets/artikel1.png" 
+                alt="De cultklassieker Rocky Horror blijft belangrijk voor de queer community" 
+                class="grid-image">
+            <div class="overlay" aria-hidden="true">
+                <span class="category">BUITENLAND</span>
+                <h2 class="heading_article">Decennia na verschijning blijft de Halloween cultklassieker Rocky Horror belangrijk voor de queer community</h2>
+                <p class="article-metadata text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
             </div>
-            
-            <!-- Sectie: Contactinformatie -->
-            <div class="info-section">
-                <h2>Contact Informatie</h2> <!-- Titel van de contactinformatie-sectie -->
-                <address>
-                    Marisstraat 86-3, 1051XV Amsterdam<br> <!-- Adresregel 1 -->
-                    KvK-nummer: 73486876<br> <!-- Kamer van Koophandel-nummer -->
-                    <strong>Bezoekadres:</strong><br>
-                    De Balie, Kleine-Gartmanplantsoen 10<br><br> <!-- Bezoekadres -->
-                    <strong>Algemeen:</strong> <a href="mailto:redactie@redpers.nl">redactie@redpers.nl</a><br> <!-- E-mailadres voor algemene vragen -->
-                    <strong>Gastartikelen:</strong> <a href="mailto:meedoen@redpers.nl">meedoen@redpers.nl</a> <!-- E-mailadres voor gastbijdragen -->
-                </address>
-                <h3>Volg ons</h3> <!-- Titel voor sociale media -->
-                <p>
-                    <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a> <!-- Links naar sociale media -->
-                </p>
+        </article>
+    
+    
+        <!-- Tweede grid-item: Kleine afbeelding 1 -->
+        <article class="grid-item">
+            <img 
+                src="assets/artikel2.png" 
+                alt="Boekrecensie: Mijn ontelbare identiteiten door Sinan Çankaya" 
+                class="grid-image">
+            <div class="overlay" aria-hidden="true">
+                <span class="category">BINNENLAND</span>
+                <h2 class="heading_article">Wij lezen: Mijn ontelbare identiteiten - Sinan Çankaya</h2>
+                <p class="article-metadata text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+            </div>
+        </article>
+    
+        <!-- Derde grid-item: Kleine afbeelding 2 -->
+        <article class="grid-item">
+            <img 
+                src="assets/artikel3.png" 
+                alt="Artikel over de relevantie van Rocky Horror voor de queer community" 
+                class="grid-image">
+            <div class="overlay" aria-hidden="true">
+                <span class="category">ECONOMIE</span>
+                <h2 class="heading_article">Decennia na verschijning blijft de Halloween cultklassieker Rocky Horror belangrijk voor de queer community</h2>
+                <p class="article-metadata text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+            </div>
+        </article>
+    </div>
+    </main>
+
+
+    <section class="content-layout">
+        <!-- Laatste Nieuws -->
+        <div class="latest-news">
+            <h2 class="text_subheading">LAATSTE NIEUWS</h2>
+            <div class="news-grid">
+                <article class="news-item">
+                    <img src="assets/artikel8.png" alt="Afbeelding: Artikel over de Halloween cultklassieker in Kunst & Media" class="news-image">
+                    <div class="news-content">
+                        <span class="news-category">KUNST & MEDIA</span>
+                        <h3 class="heading_article">Decennia na verschijning blijft de Halloween cultklassieker Rocky Horror belangrijk voor de queer community: ‘Rocky Horror is de plek ik anders kan zijn dan overdag.’</h3>
+                        <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <img src="assets/artikel9.png" alt="Afbeelding: Artikel over de Halloween cultklassieker in Buitenland" class="news-image">
+                    <div class="news-content">
+                        <span class="news-category">BUITENLAND</span>
+                        <h3 class="heading_article">Decennia na verschijning blijft de Halloween cultklassieker Rocky Horror belangrijk voor de queer community: ‘Rocky Horror is de plek ik anders kan zijn dan overdag.’</h3>
+                        <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                    </div>
+                </article>
+                <article class="news-item">
+                    <img src="assets/artikel10.png" alt="Afbeelding: Artikel over de Halloween cultklassieker in Binnenland" class="news-image">
+                    <div class="news-content">
+                        <span class="news-category">BINNENLAND</span>
+                        <h3 class="heading_article">Decennia na verschijning blijft de Halloween cultklassieker Rocky Horror belangrijk voor de queer community: ‘Rocky Horror is de plek ik anders kan zijn dan overdag.’</h3>
+                        <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    
+        <!-- Top Artikelen -->
+        <div class="top-articles">
+            <h2 class="text_subheading">TOP ARTIKELEN</h2>
+            <div class="top-articles-list">
+                <div class="top-article-item">
+                    <img src="assets/artikel4.png" alt="Afbeelding: Artikel over Mijn ontelbare identiteiten door Sinan Çankaya" class="news-image">
+                    <h4 class="heading_article">Wij lezen: Mijn ontelbare identiteiten - Sinan Çankaya</h4>
+                </div>
+                <div class="top-article-item">
+                    <img src="assets/artikel5.png" alt="Afbeelding: Artikel over Public Governance trends" class="news-image">
+                    <h4 class="heading_article">Wij lezen: Nieuwe Public Governance trends.</h4>
+                </div>
+                <div class="top-article-item">
+                    <img src="assets/artikel6.png" alt="Afbeelding: Artikel over Governance en kunst in media" class="news-image">
+                    <h4 class="heading_article">Governance en kunst in media.</h4>
+                </div>
+                <div class="top-article-item">
+                    <img src="assets/artikel7.png" alt="Afbeelding: Artikel over de Halloween cultklassieker" class="news-image">
+                    <h4 class="heading_article">Decennia na verschijning blijft de Halloween cultklassieker belangrijk.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="custom-content-layout">
+        <div class="custom-left-section">
+            <!-- Meer Binnenland Sectie -->
+            <div class="custom-news-category">
+                <h2 class="text_subheading">MEER BINNENLAND</h2>
+                <div class="custom-news-grid">
+                    <article class="custom-news-item">
+                        <img src="assets/binnen1.png" alt="Afbeelding: Binnenland artikel over de Halloween cultklassieker" class="custom-news-image">
+                        <div class="custom-news-content">
+                            <h3 class="heading_article">Decennia na verschijning<br> blijft de Halloween<br> cultklassieker belangrijk:</h3>
+                            <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                        </div>
+                    </article>
+                    <article class="custom-news-item">
+                        <img src="assets/binnen2.png" alt="Afbeelding: Binnenland artikel over de Halloween cultklassieker" class="custom-news-image">
+                        <div class="custom-news-content">
+                            <h3 class="heading_article">Decennia na verschijning<br> blijft de Halloween<br> cultklassieker belangrijk:</h3>
+                            <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+    
+            <!-- Meer Buitenland Sectie -->
+            <div class="custom-news-category">
+                <h2 class="text_subheading">MEER BUITENLAND</h2>
+                <div class="custom-news-grid">
+                    <article class="custom-news-item">
+                        <img src="assets/buiten1.png" alt="Afbeelding: Buitenland artikel over de Halloween cultklassieker" class="custom-news-image">
+                        <div class="custom-news-content">
+                            <h3 class="heading_article">Decennia na verschijning<br> blijft de Halloween<br> cultklassieker belangrijk:</h3>
+                            <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                        </div>
+                    </article>
+                    <article class="custom-news-item">
+                        <img src="assets/buiten2.png" alt="Afbeelding: Buitenland artikel over de Halloween cultklassieker" class="custom-news-image">
+                        <div class="custom-news-content">
+                            <h3 class="heading_article">Decennia na verschijning<br> blijft de Halloween<br> cultklassieker belangrijk:</h3>
+                            <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    
+        <div class="custom-right-section">
+            <!-- Donatie Box -->
+            <div class="custom-donation-box">
+                <h2 class="heading_quote">Red Pers bestaat mede dankzij jou</h2>
+                <p>Red Pers biedt jonge, aspirerende journalisten een podium en begeleiding. Dat kunnen we nog beter met jouw steun.</p>
+                <button class="button_donate" aria-label="Doneren aan Red Pers">Doneren</button>
+            </div>
+    
+            <!-- Abonneren Box -->
+            <div class="custom-subscribe-box">
+                <h2 class="heading_quote">Abonneren</h2>
+                <form class="custom-subscribe-form" aria-label="Inschrijfformulier">
+                    <input type="email" placeholder="Email ..." aria-label="Voer uw e-mailadres in" required>
+                    <button type="submit" class="button_subscribe" aria-label="Aanmelden">→</button>
+                </form>
+                <p>Ontvang alle nieuwste inhoud een paar keer per maand in je e-mail</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <div class="custom-podcast-layout">
+        <!-- Podcast Sectie -->
+        <section class="podcast-section">
+            <h2 class="heading_quote">Beluister onze Podcast</h2>
+            <iframe
+                title="Spotify Embed: Podcast"
+                style="border-radius: 12px; border: none; width: 100%; height: 152px;"
+                allowfullscreen
+                aria-label="Podcast-aflevering: Mijn ontelbare identiteiten"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                src="https://open.spotify.com/embed/episode/0JNN2x0kPRJ3yvNu3be5ig?si=0QRerbf0TDel8jJbMtJ-mQ&amp;utm_source=oembed">
+            </iframe>
+        </section>
+    
+        <!-- Podcast Nieuws Sectie -->
+        <div class="podcast-news-section">
+            <!-- Nieuws 1 -->
+            <div class="podcast-news-container">
+                <h3 class="heading_article">Podcast Nieuws 1</h3>
+                <p class="text_meta">Bekijk de laatste inzichten en diepgaande analyses uit onze nieuwste podcast-aflevering.</p>
+            </div>
+    
+            <!-- Nieuws 2 -->
+            <div class="podcast-news-container">
+                <h3 class="heading_article">Podcast Nieuws 2</h3>
+                <p class="text_meta">Luister naar interviews met inspirerende gasten over actuele thema's en onderwerpen.</p>
             </div>
         </div>
     </div>
+    
+    
+    <div class="customized-news-layout">
+        <!-- Binnenland Nieuws Sectie -->
+        <section class="customized-news-category">
+            <h2 class="text_subheading"> POLITIEK </h2>
+            <div class="customized-news-grid">
+                <article class="customized-news-item">
+                    <img src="assets/po1.png" alt="Artikel over Halloween cultklassieker in Politiek" class="customized-news-image">
+                    <div class="customized-news-content">
+                        <h3 class="heading_article">Decennia na verschijning blijft de Halloween cultklassieker belangrijk:</h3>
+                        <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                    </div>
+                </article>
+                <article class="customized-news-item">
+                    <img src="assets/po2.png" alt="Artikel over Politieke impact van Halloween cultklassieker" class="customized-news-image">
+                    <div class="customized-news-content">
+                        <h3 class="heading_article">Decennia na verschijning blijft de Halloween cultklassieker belangrijk:</h3>
+                        <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                    </div>
+                </article>
+                <article class="customized-news-item">
+                    <img src="assets/po3.png" alt="Politieke discussie rond de Halloween cultklassieker" class="customized-news-image">
+                    <div class="customized-news-content">
+                        <h3 class="heading_article">Decennia na verschijning blijft de Halloween cultklassieker belangrijk:</h3>
+                        <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    
+        <!-- Buitenland Nieuws Sectie -->
+        <section class="customized-news-category">
+            <h2 class="text_subheading"> ECONOMIE </h2>
+            <div class="customized-news-grid">
+                <article class="customized-news-item">
+                    <img src="assets/eco1.png" alt="Artikel over Economische impact van Halloween cultklassieker" class="customized-news-image">
+                    <div class="customized-news-content">
+                        <h3 class="heading_article">Decennia na verschijning blijft de Halloween cultklassieker belangrijk:</h3>
+                        <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                    </div>
+                </article>
+                <article class="customized-news-item">
+                    <img src="assets/eco2.png" alt="Economische trends en Halloween cultklassieker" class="customized-news-image">
+                    <div class="customized-news-content">
+                        <h3 class="heading_article">Decennia na verschijning blijft de Halloween cultklassieker belangrijk:</h3>
+                        <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                    </div>
+                </article>
+                <article class="customized-news-item">
+                    <img src="assets/eco3.png" alt="Financiële aspecten van Halloween cultklassieker" class="customized-news-image">
+                    <div class="customized-news-content">
+                        <h3 class="heading_article">Decennia na verschijning blijft de Halloween cultklassieker belangrijk:</h3>
+                        <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+    
+    <div class="application-section">
+        <div class="application-info">
+            <h2>Wil je onderdeel worden van <span class="highlight">Red Pers</span>?</h2>
+            <p>We zijn geregeld op zoek naar talentvolle redacteuren voor al onze redacties. Ook bieden wij stageplekken aan. Scroll naar beneden voor de openstaande vacatures en de mogelijkheid om een open sollicitatie te sturen.</p>
+        </div>
+        <div class="application-form">
+            <h3>Stuur een open sollicitatie</h3>
+            <form aria-label="Open sollicitatieformulier">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Vul je email in ..." aria-required="true" required>
+                <button type="submit" class="button_send" aria-label="Verstuur open sollicitatie">Versturen</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <div class="slider-section">
+        <div class="slider-header">
+            <h2 class="heading_quote">Overige Nieuws</h2>
+        </div>
+        <div class="slider-container" aria-labelledby="slider-section-title">
+            <h2 id="slider-section-title" class="visually-hidden">Overige Nieuws Slider</h2>
+            <div class="slider" role="region" aria-labelledby="slider-section-title">
+                <!-- Slide 1 -->
+                <div class="slide">
+                    <img src="assets/ove1.png" alt="Afbeelding van Halloween cultklassieker artikel 1">
+                    <div class="slide-content">
+                        <h3 class="heading_article">Halloween cultklassieker blijft belangrijk:</h3>
+                        <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <img src="assets/ove2.png" alt="Afbeelding van Halloween cultklassieker artikel 2">
+                    <div class="slide-content">
+                        <h3 class="heading_article">Halloween cultklassieker blijft belangrijk:</h3>
+                        <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                    </div>
+                </div>
+    
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <img src="assets/ov7.png" alt="Afbeelding van Halloween cultklassieker artikel 3">
+                    <div class="slide-content">
+                        <h3 class="heading_article">Halloween cultklassieker blijft belangrijk:</h3>
+                        <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                    </div>
+                </div>
+    
+                <!-- Slide 4 -->
+                <div class="slide">
+                    <img src="assets/ove8.png" alt="Afbeelding van Halloween cultklassieker artikel 4">
+                    <div class="slide-content">
+                        <h3 class="heading_article">Halloween cultklassieker blijft belangrijk:</h3>
+                        <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                    </div>
+                </div>
+    
+                <!-- Slide 5 -->
+                <div class="slide">
+                    <img src="assets/ove6.png" alt="Afbeelding van Halloween cultklassieker artikel 5">
+                    <div class="slide-content">
+                        <h3 class="heading_article">Halloween cultklassieker blijft belangrijk:</h3>
+                        <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                    </div>
+                </div>
+    
+                <!-- Slide 6 -->
+                <div class="slide">
+                    <img src="assets/ov4.png" alt="Afbeelding van Halloween cultklassieker artikel 6">
+                    <div class="slide-content">
+                        <h3 class="heading_article">Halloween cultklassieker blijft belangrijk:</h3>
+                        <p class="text_meta">Siem Rothengatter - 4 Min - 15 nov</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+   <!-- Navigatiebolletjes -->
+    <div class="slider-dots" role="navigation" aria-label="Slider navigatie">
+    <button class="dot active" aria-label="Ga naar slide 1" aria-current="true"></button>
+    <button class="dot" aria-label="Ga naar slide 2"></button>
+    <button class="dot" aria-label="Ga naar slide 3"></button>
+    <button class="dot" aria-label="Ga naar slide 4"></button>
+    <button class="dot" aria-label="Ga naar slide 5"></button>
+    <button class="dot" aria-label="Ga naar slide 6"></button>
+</div>
+
+
+    
+    
+
+  <!-- Footer -->
+  <footer class="responsive-footer">
+    <div class="footer-content">
+        <!-- Logo Sectie -->
+        <div class="footer-logo">
+            <a href="/">
+                <img src="https://redpers.nl/wp-content/uploads/2023/05/RedPers_Logo_Rgb_White-1.svg" alt="Red Pers Logo" class="footer-logo-img">
+            </a>
+        </div>
+
+        <!-- Navigatie Kolommen -->
+        <div class="footer-columns">
+            <!-- Rubrieken -->
+            <div class="footer-column">
+                <h3>Rubrieken</h3>
+                <ul>
+                    <li><a href="#columns">Columns</a></li>
+                    <li><a href="#economie">Economie</a></li>
+                    <li><a href="#kunst-media">Kunst & Media</a></li>
+                    <li><a href="#podcasts">Podcasts</a></li>
+                    <li><a href="#politiek">Politiek</a></li>
+                    <li><a href="#wetenschap">Wetenschap</a></li>
+                </ul>
+            </div>
+
+            <!-- Navigatie -->
+            <div class="footer-column">
+                <h3>Navigatie</h3>
+                <ul>
+                    <li><a href="#colofon">Colofon</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#doneren">Doneren</a></li>
+                    <li><a href="#meedoen">Meedoen</a></li>
+                    <li><a href="#over">Over Red Pers</a></li>
+                </ul>
+            </div>
+
+            <!-- Service -->
+            <div class="footer-column">
+                <h3>Service</h3>
+                <ul>
+                    <li><a href="#">Tip de redactie</a></li>
+                    <li><a href="#">Meld een fout</a></li>
+                    <li><a href="#">Nieuwsbrief</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-column">
+                <h3>Meer Red Pers</h3>
+                <ul class="social-links">
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">X (Twitter)</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Onderste Regel -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Red Pers. Alle rechten voorbehouden.</p>
+    </div>
+</footer>
+<script src="script/script.js"></script>
+
 </body>
 </html>
