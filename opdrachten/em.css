@@ -1,0 +1,49 @@
+/* Voeg het custom font toe met @font-face */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/Roboto-BlackItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Algemene stijl voor de pagina */
+body {
+    font-family: 'CustomFont', sans-serif; /* Gebruik het custom font */
+    font-size: 1rem; /* Basistekstgrootte van 16px */
+    line-height: 1.5em; /* Line-height is 1.5 keer de font-size */
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Lichtgrijze achtergrond */
+    color: #a00808; /* Donkere tekstkleur */
+}
+
+/* Styling voor koppen */
+h1 {
+    font-size: 2.5rem; /* 2.5 keer de basistekstgrootte */
+    line-height: 1.2em; /* Compactere regelafstand */
+    color: #222; /* Donkerdere kleur voor de koptekst */
+    margin-bottom: 1.5em; /* Ruimte onder de koptekst */
+}
+
+h2 {
+    font-size: 2rem; /* 2 keer de basistekstgrootte */
+    line-height: 1.3em;
+    color: #444; /* Iets lichtere kleur dan de hoofdheader */
+    margin-bottom: 1em;
+}
+
+/* Styling voor paragrafen */
+p {
+    font-size: 1em; /* Gelijk aan de body font-size */
+    line-height: 1.6; /* Iets ruimere regelafstand */
+    margin-bottom: 1.5em; /* Ruimte onder paragrafen */
+    text-align: justify; /* Tekst uitlijnen */
+}
+
+/* Styling voor inline code */
+code {
+    font-family: 'Courier New', monospace; /* Monospace font voor code */
+    background-color: #e8e8e8;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+}

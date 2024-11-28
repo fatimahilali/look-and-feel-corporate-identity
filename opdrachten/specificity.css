@@ -1,0 +1,25 @@
+h2 {
+    color: purple;
+}
+
+
+.heading-medium {
+    color: pink;
+}
+
+
+.green {
+    color: green;
+}
+
+
+
+:root {
+    --highlight-color: yellow;
+}
+
+
+
+#heading {
+    color: var(--highlight-color);
+}
